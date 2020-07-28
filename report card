@@ -1,0 +1,37 @@
+pragma solodity ^0.4.21 < 0.7.0;
+
+contract ReportCard{
+
+      string public studentName;
+      unit public studentRollNo;
+      unit  public  studentBatch;
+      string public status;
+      unit public subject1;
+      unit  public subject2;
+      unit public subject3;
+      unit public subject4;
+      unit result;
+      
+      constructor(string newName,unit newRollno,unit newBatch,unit marks1,unit marks2,unit marks3,unit marks4)public{
+          studentName    = newName;
+          studentRollNo  =  newRollno;
+          studentBatch   = newBatch;
+          
+          // Provide marks out off 100 for each subjects
+          subject1 = marks1; 
+          subject2 = marks2;
+          subject = marks3;
+          subject = marks;
+          
+          result = (subject1 + subject2+ subject 3+ subject4);
+          
+          // Total Result should be out off 400
+          // Considering total pass percentage to be 50% of 400
+          status = (result < 200)? "Fail" : "Pass";
+       }
+       
+       function getDetails()public view returns (string,unit,unit,string){
+       
+             return(studentNmae,studentBatch,studentBatch,status);
+       }
+ }      
